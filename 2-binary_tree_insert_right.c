@@ -5,7 +5,7 @@
  * @parent: the address of the parent node
  * @value: the value of the right node
  * Return: the address to the right node
-*/
+ */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *right;
