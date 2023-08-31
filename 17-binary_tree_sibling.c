@@ -1,11 +1,11 @@
 #include "binary_trees.h"
 
 /**
- * sibling_binary_tree - finds the sibling of a node
+ * binary_tree_sibling - finds the sibling of a node
  * @node: the address of the node
  * Return: address of the sibling node
 */
-binary_tree_t *sibling_binary_tree(binary_tree_t *node)
+binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
 	if (node == NULL || node->parent == NULL)
 		return (NULL);

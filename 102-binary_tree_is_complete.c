@@ -34,11 +34,11 @@ int is_complete(const binary_tree_t *tree, size_t index, size_t size)
 }
 
 /**
- * is_complete_binary_tree - checks if a binary tree is complete
+ * binary_tree_is_complete - checks if a binary tree is complete
  * @tree: the address of the root node
  * Return: 0, 1
 */
-int is_complete_binary_tree(const binary_tree_t *tree)
+int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);

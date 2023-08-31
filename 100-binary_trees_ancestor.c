@@ -16,12 +16,12 @@ size_t bi_depth(const binary_tree_t *tree)
 }
 
 /**
- * ancestor_binary_trees - finds the ancestor of a two node
+ * binary_trees_ancestor - finds the ancestor of a two node
  * @first: the address of the first node
  * @second: the address of the second node
  * Return: address of the ancestor
 */
-binary_tree_t *ancestor_binary_trees(const binary_tree_t *first,
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 									const binary_tree_t *second)
 {
 	size_t d1 = bi_depth(first), d2 = bi_depth(second);

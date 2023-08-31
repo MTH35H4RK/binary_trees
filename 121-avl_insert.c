@@ -9,7 +9,7 @@
 avl_t *insert_node(avl_t **tree, int value)
 {
 	avl_t *it = *tree;
-	avl_t *new_node = node_binary_tree(NULL, value);
+	avl_t *new_node = binary_tree_node(NULL, value);
 
 	if (new_node == NULL)
 		return (NULL);
@@ -61,30 +61,30 @@ avl_t *save_balance(avl_t *node, int value)
 	while (node->parent)
 	{
 		node = node->parent;
-		balance = balance_binary_tree(node);
+		balance = binary_tree_balance(node);
 		if (balance > 1)
 		{
 			if (node->left->n < value)
-				node->left = rotate_left_binary_tree(node->left);
-			node = rotate_right_binary_tree(node);
+				node->left = binary_tree_rotate_left(node->left);
+			node = binary_tree_rotate_right(node);
 		}
 		else if (balance < -1)
 		{
 			if (node->right->n > value)
-				node->right = rotate_right_binary_tree(node->right);
-			node = rotate_left_binary_tree(node);
+				node->right = binary_tree_rotate_right(node->right);
+			node = binary_tree_rotate_left(node);
 		}
 	}
 	return (node);
 }
 
 /**
- * insert_avl - insert a new node into a avl
+ * avl_insert - insert a new node into a avl
  * @tree: the address of the root node
  * @value: the function to apply
  * Return: the address of the new node
 */
-avl_t *insert_avl(avl_t **tree, int value)
+avl_t *avl_insert(avl_t **tree, int value)
 {
 	avl_t *new_node = insert_node(tree, value);
 

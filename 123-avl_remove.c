@@ -65,11 +65,11 @@ avl_t *avl_balance(avl_t *node)
 
 	while (1)
 	{
-		balance = balance_binary_tree(node);
+		balance = binary_tree_balance(node);
 		if (balance > 1)
-			node = rotate_right_binary_tree(node);
+			node = binary_tree_rotate_right(node);
 		else if (balance < -1)
-			node = rotate_left_binary_tree(node);
+			node = binary_tree_rotate_left(node);
 		if (node->parent)
 			node = node->parent;
 		else
@@ -78,12 +78,12 @@ avl_t *avl_balance(avl_t *node)
 	return (node);
 }
 /**
- * remove_avl - removes a node from a Binary Search Tree
+ * avl_remove - removes a node from a Binary Search Tree
  * @root: pointer to the root node
  * @value: the value to be removed from the tree
  * Return: the address of the new root node
 */
-avl_t *remove_avl(avl_t *root, int value)
+avl_t *avl_remove(avl_t *root, int value)
 {
 	avl_t *node, *new_root, *parent;
 

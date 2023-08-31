@@ -37,11 +37,11 @@ void do_func(const binary_tree_t *tree, int level, void (*func)(int))
 }
 
 /**
- * levelorder_binary_tree - goes through a binary tree using level-order
+ * binary_tree_levelorder - goes through a binary tree using level-order
  * @tree: the address of the root node
  * @func: is a pointer to a function to call for each node
 */
-void levelorder_binary_tree(const binary_tree_t *tree, void (*func)(int))
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	int height = bi_height(tree);
 	int i;

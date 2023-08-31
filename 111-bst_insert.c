@@ -1,18 +1,18 @@
 #include "binary_trees.h"
 
 /**
- * insert_bst - insert a new node into a bst
+ * bst_insert - insert a new node into a bst
  * @tree: the address of the root node
  * @value: the function to apply
  * Return: the address of the new node
 */
-bst_t *insert_bst(bst_t **tree, int value)
+bst_t *bst_insert(bst_t **tree, int value)
 {
 	bst_t *it = *tree;
 
 	if (*tree == NULL)
 	{
-		*tree = node_binary_tree(NULL, value);
+		*tree = binary_tree_node(NULL, value);
 		return (*tree);
 	}
 	while (1)
@@ -23,7 +23,7 @@ bst_t *insert_bst(bst_t **tree, int value)
 				it = it->left;
 			else
 			{
-				it->left = node_binary_tree(it, value);
+				it->left = binary_tree_node(it, value);
 				return (it->left);
 			}
 		}
@@ -33,7 +33,7 @@ bst_t *insert_bst(bst_t **tree, int value)
 				it = it->right;
 			else
 			{
-				it->right = node_binary_tree(it, value);
+				it->right = binary_tree_node(it, value);
 				return (it->right);
 			}
 		}

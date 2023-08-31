@@ -83,11 +83,11 @@ int is_avl(const binary_tree_t *tree)
 }
 
 /**
- * tree_is_avl_binary - checks if a binary tree is a valid AVL tree
+ * binary_tree_is_avl - checks if a binary tree is a valid AVL tree
  * @tree: the address of the root node
  * Return: 0, 1
 */
-int tree_is_avl_binary(const binary_tree_t *tree)
+int binary_tree_is_avl(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);

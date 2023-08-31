@@ -15,7 +15,7 @@ int main(void)
 	};
 	size_t n = sizeof(array) / sizeof(array[0]);
 
-	tree = to_heap_array(array, n);
+	tree = array_to_heap(array, n);
 	if (!tree)
 		return (1);
 	binary_tree_print(tree);

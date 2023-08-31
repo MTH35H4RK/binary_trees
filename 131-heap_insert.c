@@ -94,19 +94,19 @@ void do_heapify(heap_t *tree, int level)
 }
 
 /**
- * insert_heap - insert a new node into a avl
+ * heap_insert - insert a new node into a avl
  * @root: the address of the root node
  * @value: the function to apply
  * Return: the address of the new node
 */
-heap_t *insert_heap(heap_t **root, int value)
+heap_t *heap_insert(heap_t **root, int value)
 {
 	heap_t *node, *it;
 	int height = bi_height(*root) - 1, i;
 
 	if (root == NULL)
 		return (NULL);
-	node = node_binary_tree(NULL, value);
+	node = binary_tree_node(NULL, value);
 	if (*root == NULL)
 	{
 		*root = node;

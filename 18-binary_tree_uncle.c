@@ -1,11 +1,11 @@
 #include "binary_trees.h"
 
 /**
- * uncle_binary_tree - finds the uncle of a node
+ * binary_tree_uncle - finds the uncle of a node
  * @node: the address of the node
  * Return: address of the uncle node
 */
-binary_tree_t *uncle_binary_tree(binary_tree_t *node)
+binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	binary_tree_t *grand_parent;
 

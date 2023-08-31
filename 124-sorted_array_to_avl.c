@@ -16,7 +16,7 @@ avl_t *to_avl(avl_t *parent, int *array, int start, int end)
 	if (start > end)
 		return (NULL);
 	mid = (start + end) / 2;
-	tree = node_binary_tree(parent, array[mid]);
+	tree = binary_tree_node(parent, array[mid]);
 	if (tree == NULL)
 		return (NULL);
 	tree->left = to_avl(tree, array, start, mid - 1);
@@ -24,12 +24,12 @@ avl_t *to_avl(avl_t *parent, int *array, int start, int end)
 	return (tree);
 }
 /**
- * to_avl_sorted_array - builds a AVL tree from an array
+ * sorted_array_to_avl - builds a AVL tree from an array
  * @array: pointer to the first element of the array to be converted
  * @size: number of element in the array
  * Return: the address of the root node
 */
-avl_t *to_avl_sorted_array(int *array, size_t size)
+avl_t *sorted_array_to_avl(int *array, size_t size)
 {
 	if (!array)
 		return (NULL);
