@@ -6,6 +6,7 @@
  * @value: Value of the current node.
  * Return: Pointer to the newly created node.
 */
+
 binary_tree_t *node_binary_tree(binary_tree_t *parent, int value)
 {
 	binary_tree_t *node;
