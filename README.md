@@ -1,6 +1,6 @@
-This the readme.md file.
+This the readme.md file
 
-To be changed..
+To be changed...
 
 Authors
 Ayman Bouaricha
